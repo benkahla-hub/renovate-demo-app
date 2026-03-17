@@ -3,5 +3,34 @@
   "extends": [
     "config:recommended",
     "mergeConfidence:all-badges"
+  ],
+    "packageRules": [
+      {
+      "matchDepTypes": ["devDependencies"],  // <-- Matcher
+      "groupName": "dev dependencies"        // <-- Aktion
+      },
+      {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "patch-minor dependencies",
+      "groupSlug": "patch-minor",
+      "enabled": true,
+      "matchPackageNames": [
+        "*"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies",
+      "groupSlug": "major",
+      "enabled": true,
+      "matchPackageNames": [
+        "*"
+      ]
+    }
   ]
 }
