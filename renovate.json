@@ -6,25 +6,15 @@
   ],
     "packageRules": [
       {
-      "matchDepTypes": ["devDependencies"],  // <-- Matcher
-      "groupName": "dev dependencies"        // <-- Aktion
-      },
-      {
-      "matchPackageNames": ["axios"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": false
-      },
-      {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "matchUpdateTypes": ["minor","patch"],
       "groupName": "patch-minor dependencies",
       "groupSlug": "patch-minor",
       "enabled": true,
-      "matchPackageNames": [
-        "*"
-      ]
+      "matchPackageNames": ["*"]
+    },
+    {
+      "matchPackageNames": ["axios"],
+      "enabled": false
     }
   ]
 }
