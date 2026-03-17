@@ -21,6 +21,17 @@
     {
       "matchPackageNames": ["axios"],
       "enabled": false
-    }
+    },
+      {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies",
+      "groupSlug": "major",
+      "enabled": true,
+      "matchPackageNames": [
+        "*"
+      ]
+     } 
   ]
 }
